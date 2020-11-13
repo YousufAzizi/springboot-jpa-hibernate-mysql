@@ -11,6 +11,7 @@ public class Employee {
 	@Id
 	private long id;
 	private String firstname;
+	private String middlename;
 	private String lastname;
 	private String manager;
 	//private Department department;
@@ -21,12 +22,15 @@ public class Employee {
 	}
 	// field constructor
 //	public Employee(int id, String firstname, String lastname, String manager, Department department) {
-	public Employee(int id, String firstname, String lastname, String manager) {
+	
+	public Employee(long id, String firstname, String middlename, String lastname, String manager) {
 		super();
 		this.id = id;
 		this.firstname = firstname;
+		this.middlename = middlename;
 		this.lastname = lastname;
 		this.manager = manager;
+		
 		//this.department = department;
 	}
 	public long getId() {
@@ -40,6 +44,12 @@ public class Employee {
 	}
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
+	}
+	public String getMiddlename() {
+		return middlename;
+	}
+	public void setMiddlename(String middlename) {
+		this.middlename = middlename;
 	}
 	public String getLastname() {
 		return lastname;
@@ -66,7 +76,7 @@ public class Employee {
 //	}
 	
 	public String toString() {
-		return "My Employee information [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", manager=" + manager
+		return "My Employee information [id=" + id + ", firstname=" + firstname + ",middlename="+ middlename +" lastname=" + lastname + ", manager=" + manager
 				+ ", department=" + "]";
 	}
 	

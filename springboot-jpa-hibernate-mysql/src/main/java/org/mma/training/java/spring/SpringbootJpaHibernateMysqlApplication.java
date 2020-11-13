@@ -20,7 +20,15 @@ public class SpringbootJpaHibernateMysqlApplication implements CommandLineRunner
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Employee employee = new Employee(100, "John", "Doe", "Harry Potter");
+		Employee employee = new Employee(200, "Hamed", "HA", "Azizi", "James");
+		
+		Employee employee1 = new Employee(300, "Nasrat", "NA", "Ahmadi", "Tejas");
+		Employee employee2 = new Employee(300, "Shoaib", "SH", "karim", "Tariq");
+		Employee employee3 = new Employee(400, "Najeeb", "NA", "Assadi", "Tejas");
+		Employee employee4 = new Employee(500, "Tauseef", "TA", "Ahsan", "Jackie");
+		Employee employee5 = new Employee(600, "Marry", "MA", "LU", "Jackie");
+		Employee employee6 = new Employee(700, "Keegan", "KD", "Douvarjo", "Jackie");
+		
 		employeeRepository.save(employee);
 		
 	}
